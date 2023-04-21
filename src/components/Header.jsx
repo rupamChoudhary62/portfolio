@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { House, Github, Linkedin, Medium,  } from 'react-bootstrap-icons';
+import { Github, Linkedin, Medium, HouseFill,  } from 'react-bootstrap-icons';
 import {Link} from "react-router-dom"
 
 export const Header = () => {
@@ -13,13 +13,19 @@ export const Header = () => {
       const Btn = {
             backgroundColor: "#fe655c",
             color: "white",
-            fontWeight: "600"
+            fontWeight: "600",
+      }
+      const contact = {
+            backgroundColor: "transparent",
+            color: "white",
+            fontWeight: "600",
+            textDecoration: "none"
       }
       
   return (
     <nav className='d-flex justify-content-between w-100'>
-      <div className='ps-4 pt-3'>
-            <Link to="/"> <House color='white' size={36}/></Link>
+      <div className='ps-5 pt-4'>
+            <Link to="/"> <HouseFill color='white' size={32}/></Link>
       </div>
       <div className='pt-4'>
             <ul style={ul}>
@@ -41,7 +47,7 @@ export const Header = () => {
             </ul>
       </div>
       <div className='pe-3 pt-3'>
-            <button style={Btn} className="btn rounded-5 ps-3 pe-3">Hire Me</button>
+            <button style={Btn} className="btn rounded-5 ps-3 pe-3"><Link style={contact} to="/contact">Hire Me</Link></button>
       </div>
     </nav>
   )
