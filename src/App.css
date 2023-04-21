@@ -16,3 +16,15 @@
       align-items: center;
       width: 100%;
 }
+.icons{
+      font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1600px) {
+      .icons{
+            font-size: 1.2rem;
+      }
+      .responsiveFontSize{
+            font-size: .9rem;
+      }
+    }

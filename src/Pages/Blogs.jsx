@@ -43,7 +43,9 @@ const Blogs = () => {
             borderRadius: ".8rem"
       }
       const innerDiv= {
-            display: "flex",
+            borderBottom: "1px solid grey",
+            
+            paddingBottom: "2rem",
             gap: "1rem",
             backgroundColor : "rgb(30,39,56)",
       }
@@ -52,6 +54,7 @@ const Blogs = () => {
             flexDirection: "column",
             justifyContent: "center",
             backgroundColor : "rgb(30,39,56)",
+           
       }
       const background= {
             backgroundColor : "rgb(30,39,56)",
@@ -71,17 +74,17 @@ const Blogs = () => {
     <>
       <Header/>
 
-      <section style={Section} className='col-md-6'>
+      <section style={Section} className='col-12 col-md-10 col-lg-8 col-xxl-6 '>
             {
                   data.map((blogData)=>{
-                        return <div style={innerDiv}>
+                        return <div style={innerDiv} className='d-flex flex-column flex-lg-row align-items-center '>
                               <div>
                                     <img style={imageStyle} src={blogData.imageLink}/>
                               </div>
                               <div style={dataStyle}>
-                                    <h6 style={background} className='fs-5'>{blogData.title}</h6>
-                                    <p style={p}>{blogData.summary}</p>
-                                    <a style={anchor} href={blogData.link}>Continue Reading</a>
+                                    <h6 style={background} className='fs-5 text-center text-lg-start'>{blogData.title}</h6>
+                                    <p style={p} className='text-center pt-2 text-lg-start'>{blogData.summary}</p>
+                                    <a style={anchor} className='text-center text-lg-start' href={blogData.link}>Continue Reading</a>
                               </div>
                         </div>
                   })
