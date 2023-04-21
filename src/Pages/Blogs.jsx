@@ -85,7 +85,7 @@ const Blogs = () => {
                                     <h6 style={background} className='fs-5 text-center text-lg-start'>{blogData.title}</h6>
                                     <p style={p} className='text-center pt-2 text-lg-start'>{blogData.summary}</p>
                                     <a style={anchor} className='text-center text-lg-start' href={blogData.link}>Continue Reading</a>
-                              </div>
+f                              </div>
                         </div>
                   })
             }
