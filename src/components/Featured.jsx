@@ -78,7 +78,7 @@ const Featured = () => {
   return (
     <section style={Section} className='col-md-6'>
             <h4 style={background} className='pt-5'>Featured Blogs</h4>
-            <p className='w-75 text-center pt-3' style={p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque esse rem blanditiis? Commodi, facilis dolore dolorem beatae quae fugiat illo?</p>
+            <p className='w-75 text-center pt-3' style={p}>Explore thought-provoking articles that showcase my passion for continuous learning and professional growth.</p>
             <div className='d-flex flex-row justify-content-around mt-5 mb-4 w-75'>
                   <Carousel style={CaptionStyle}>
                         <Carousel.Item style={CaptionStyle}>

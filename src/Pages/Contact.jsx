@@ -45,7 +45,7 @@ const Contact = () => {
                   <p style={para} className='w-75'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio natus tenetur aliquam?</p>
                   <div className='d-flex flex-column gap-2' style={background}>
                         <div className='d-flex align-items-center gap-3' style={background}><EnvelopeFill style={icon} size={25}></EnvelopeFill><p style={iconpara}>contactrupamchoudhary@gmail.com</p></div>
-                        <div className='d-flex align-items-center gap-3' style={background}><TelephoneFill style={icon} size={25}></TelephoneFill><p style={iconpara}>+91 7206390766</p></div>
+                        {/* <div className='d-flex align-items-center gap-3' style={background}><TelephoneFill style={icon} size={25}></TelephoneFill><p style={iconpara}></p></div> */}
                   </div>
             </section>
             <Footer/>
