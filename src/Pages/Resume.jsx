@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Book, Envelope, Github, Linkedin, PcDisplayHorizontal, Person, PersonCheck, Telephone, Tools, } from 'react-bootstrap-icons'
+import { Book, Envelope, Github, Linkedin, PcDisplayHorizontal, Person, PersonCheck, PersonWorkspace, Telephone, Tools, } from 'react-bootstrap-icons'
 import "../App.css"
 
 const Resume = () => {
 
       const skills = ["Onpage", "Offpage", "Keyword Research", "Link Building", "Wordpress"];
       const tools = ["Google Console", "Google Analytics", "Frase.io", "Ahref's", "SEMrush","UberSuggest", "Canva", "ChatGPT" ];
+      const responsibilities = [" Develop and implement SEO strategie", "Analyze website traffic and performance", "Keyword research and optimization","On-page and Off-page optimization", "Content creation and optimization", "Keeping up with SEO trends", "Collaboration"];
       const Section= {
             display: "flex",
             flexDirection: "column",
@@ -49,25 +50,49 @@ const Resume = () => {
                        <div className='d-flex flex-column ps-2 ps-md-4 rounded-3'>
                               <div className='d-flex gap-2 gap-md-4 pt-2 pe-2 rounded-3'>
                                     <Github className='icons'/>
-                                    <p style={ProfilePara} className='responsiveFontSize'>rajat62</p>
+                                    <p  className='responsiveFontSize'>
+                                          <a 
+                                                style={{
+                                                      ProfilePara,
+                                                      background:"transparent", 
+                                                      textDecoration:"none",
+                                                      color:"#a5b3ce"
+                                                }} 
+                                                href='https://github.com/rupamChoudhary62' 
+                                                target="_blank"
+                                          >rupamChoudhary62
+                                          </a>
+                                    </p>
                               </div>
                               <div className='d-flex gap-2 gap-md-4 pt-2 pe-3'>
                                     <Envelope className='icons'/>
-                                    <p style={ProfilePara} className=' responsiveFontSize'>rajatchoudharyjmit@gmail.com</p>
+                                    <p style={ProfilePara} className=' responsiveFontSize'>contactrupamchoudhary@gmail.com</p>
                               </div>
                               <div className='d-flex gap-2 gap-md-4 pt-2 pe-2'>
                                     <Linkedin className='icons' />
-                                    <p className='responsiveFontSize' style={ProfilePara}>Rajat Choudhary</p>
+                                    <p className='responsiveFontSize' style={ProfilePara}>
+                                          <a 
+                                                style={{
+                                                      ProfilePara,
+                                                      background:"transparent", 
+                                                      textDecoration:"none",
+                                                      color:"#a5b3ce"
+                                                }} 
+                                                href='https://www.linkedin.com/in/rupam-choudhary/' 
+                                                target="_blank"
+                                          >Rupam Choudhary
+                                          </a>
+                                    </p>
                               </div>
-                              <div className='d-flex ga-2 gap-md-4 pt-2 pe-2 rounded-3'>
+                              {/* <div className='d-flex ga-2 gap-md-4 pt-2 pe-2 rounded-3'>
                                     <Telephone className='icons'/>
-                                    <p className='responsiveFontSize' style={ProfilePara}>72096390766</p>
-                              </div>
+                                    <p className='responsiveFontSize' style={ProfilePara}></p>
+                              </div> */}
                        </div>
                   </div>
                   <div className='w-50 text-dark d-flex flex-column justify-content-center gap-3 ps-4 p-md-2 ps-lg-0' style={DefaultColor}>
                         <h4 style={DefaultColor} className='fs-1'>Rupam Choudhary</h4>
-                        <p style={p} className='fs-4'>SEO Executive</p>
+                        <p style={p} className='fs-4'>Sr. SEO Executive</p>
                   </div>
             </div>
             <div className='d-flex justify-content-between w-100 mt-5' style={DefaultColor}>
@@ -108,9 +133,10 @@ const Resume = () => {
                        </div>
                        <h6 style={DefaultColor}>Sr. SEO Executive</h6>
                         <p style={p} className='responsiveFontSize'>CAL Info, Kurukshetra (June 2022-Till Date)</p>
-                        <h6 style={DefaultColor}>Content Writer</h6>
+                        <h6 style={DefaultColor}>Sr. Content Writer</h6>
                         <p style={p} className='responsiveFontSize'>CAL Info, Kurukshetra (December 2019-June 2022)</p>
                   </div>
+                  
             </div>
             <div className='d-flex justify-content-between w-100 mt-5 mb-5' style={DefaultColor}>
                   <div style={DefaultColor} className='w-50 text-dark d-flex flex-column ps-0 ps-md-5 gap-2'>
@@ -123,12 +149,18 @@ const Resume = () => {
                        })}
                   </div>
                   <div className='w-50 text-dark d-flex flex-column justify-content-center gap-3' style={DefaultColor}>
-                       
+                        <div style={DefaultColor} className='d-flex gap-3 gap-lg-5 mb-3'>
+                              <PersonWorkspace size={25}/>
+                              <h5 style={DefaultColor} className='fs-4'>Responsibilities</h5>
+                       </div>
+                       {responsibilities.map((tool)=>{
+                             return <li style={p} className='responsiveFontSize'>{tool}</li>
+                       })}
                   </div>
             </div>
       </section>
             <div className='pe-3 pb-5'>
-                  <button style={Btn} className="btn rounded-5 ps-3 pe-3"><a style={contact} href='https://drive.google.com/file/d/1_zzQn2QWZ6SoTTrMtTeIZJN6oZdQnFsa/view?usp=share_link' target='_blank'>Download</a></button>
+                  <button style={Btn} className="btn rounded-5 ps-3 pe-3"><a style={contact} href='https://drive.google.com/file/d/1glYbVRwcPtmTTLgAa3Wo5hEOgpDNWXfb/view?usp=sharing' target='_blank'>Download</a></button>
             </div>
   </>
   )

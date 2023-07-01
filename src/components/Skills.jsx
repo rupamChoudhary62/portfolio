@@ -62,7 +62,7 @@ const Skills = () => {
   return (
     <section style={Section} className='col-md-6 '>
       <h4 style={background} className='pt-5'>Skills</h4>
-      <p className='w-75 text-center pt-3' style={p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque esse rem blanditiis? Commodi, facilis dolore dolorem beatae quae fugiat illo?</p>
+      <p className='w-75 text-center pt-3' style={p}> Browse through this section to discover the unique blend of technical expertise, problem-solving skills that define my professional profile.</p>
       <div style={iconsDiv}>
             {icons.map((icon)=>{
                   return <img src={icon} style={iconImages} key={count++}/>
